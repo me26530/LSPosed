@@ -318,7 +318,7 @@ void Logcat::Run() {
             if (modules_print_count_ >= kMaxLogSize) [[unlikely]] RefreshFd(false);
         }
 
-        OnCrash(errno);
+        //OnCrash(errno);
     }
 }
 
