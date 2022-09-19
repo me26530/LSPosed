@@ -34,12 +34,9 @@
     <string name="module_repo">Bewaarplek</string>
     <string name="module_repo_loading">Laai…</string>
     <string name="module_repo_up_to_date">%d modules enabled</string>
-    <plurals name="module_repo_upgradable">
-        <item quantity="one">%d module enabled</item>
-        <item quantity="other">%d modules enabled</item>
-    </plurals>
+    <string name="module_repo_published_time">Published at %s</string>
+    <string name="module_repo_updated_time">Opgedateer op %s</string>
     <string name="about_view_source_code"><![CDATA[Bekyk bronkode by %1$s<br/>Sluit aan by ons %2$s -kanaal]]></string>
-    <string name="translators" comment="Dear translators, please add your home page here following the format. There can be more than one translator. So feel free to append yourself.">nul</string>
     <string name="install">Install</string>
     <string name="install_summary">Tik om LSPosed te installeer</string>
     <string name="not_installed">Not installed</string>
@@ -80,6 +77,7 @@
     <string name="menuSaveToSd">Stoor</string>
     <string name="nav_item_logs_verbose">Uitgebreide logs</string>
     <string name="nav_item_logs_module">Modules</string>
+    <string name="logs_saved">Logs gestoor</string>
     <string name="logs_save_failed2">Kon nie stoor nie:\n%s</string>
     <string name="menuClearLog">Vee logboek nou uit</string>
     <string name="logs_cleared">Log is suksesvol uitgevee.</string>

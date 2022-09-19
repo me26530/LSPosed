@@ -33,6 +33,8 @@
     <string name="module_repo">Gudang</string>
     <string name="module_repo_loading">Memuat…</string>
     <string name="module_repo_up_to_date">Semua modul sudah terbaru</string>
+    <string name="module_repo_published_time">Diterbitkan pada %s</string>
+    <string name="module_repo_updated_time">Diperbarui pada %s</string>
     <plurals name="module_repo_upgradable">
         <item quantity="other">%d modul dapat ditingkatkan</item>
     </plurals>
@@ -78,6 +80,7 @@
     <string name="menuSaveToSd">Simpan</string>
     <string name="nav_item_logs_verbose">Log Verbose</string>
     <string name="nav_item_logs_module">Log Modul</string>
+    <string name="logs_saved">Log disimpan</string>
     <string name="logs_save_failed2">Gagal menyimpan:\n%s</string>
     <string name="menuClearLog">Hapus log sekarang</string>
     <string name="logs_cleared">Log berhasil dihapus.</string>

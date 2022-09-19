@@ -34,6 +34,8 @@
     <string name="module_repo">Modül deposu</string>
     <string name="module_repo_loading">Yükleniyor…</string>
     <string name="module_repo_up_to_date">Bütün modüller güncel</string>
+    <string name="module_repo_published_time">%syayınlandı</string>
+    <string name="module_repo_updated_time">%sgüncellendi</string>
     <plurals name="module_repo_upgradable">
         <item quantity="one">%d modül güncellenebilir</item>
         <item quantity="other">%d modül güncellenebilir</item>
@@ -80,6 +82,7 @@
     <string name="menuSaveToSd">Kaydet</string>
     <string name="nav_item_logs_verbose">Ayrıntılı Günlükler</string>
     <string name="nav_item_logs_module">Modül Günlükleri</string>
+    <string name="logs_saved">Günlükler kaydedildi</string>
     <string name="logs_save_failed2">Kaydedilemedi:\n%s</string>
     <string name="menuClearLog">Günlüğü şimdi temizle</string>
     <string name="logs_cleared">Günlük başarıyla temizlendi.</string>

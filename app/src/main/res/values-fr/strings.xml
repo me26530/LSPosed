@@ -34,6 +34,8 @@
     <string name="module_repo">Dépôt</string>
     <string name="module_repo_loading">Chargement…</string>
     <string name="module_repo_up_to_date">Tous les modules sont à jour</string>
+    <string name="module_repo_published_time">Publié le %s</string>
+    <string name="module_repo_updated_time">Mise à jour le %s</string>
     <plurals name="module_repo_upgradable">
         <item quantity="one">%d modules évolutifs</item>
         <item quantity="other">%d modules évolutifs</item>
@@ -81,6 +83,7 @@ https://github.com/tclement0922</string>
     <string name="menuSaveToSd">Sauvegarder</string>
     <string name="nav_item_logs_verbose">Journaux détaillés</string>
     <string name="nav_item_logs_module">Journaux des modules</string>
+    <string name="logs_saved">Journaux enregistrés</string>
     <string name="logs_save_failed2">Échec de la sauvegarde :\n%s</string>
     <string name="menuClearLog">Effacer le journal maintenant</string>
     <string name="logs_cleared">Journal effacé avec succès.</string>

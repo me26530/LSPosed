@@ -22,7 +22,7 @@
 #include <linux/fs.h>
 #include <sys/mman.h>
 
-#include "ConfigImpl.h"
+#include "config_impl.h"
 #include "elf_util.h"
 #include "loader.h"
 #include "magisk_loader.h"
@@ -134,7 +134,8 @@ namespace lspd {
                         return GetArt()->getSymbPrefixFirstAddress(symbol);
                     },
                 };
-                InitHooks(env, initInfo);
+                InitArtHooker(env, initInfo);
+                InitHooks(env);
                 SetupEntryClass(env);
                 FindAndCall(env, "forkCommon",
                             "(ZLjava/lang/String;Landroid/os/IBinder;)V",
@@ -213,7 +214,8 @@ namespace lspd {
             ConfigBridge::GetInstance()->obfuscation_map(std::move(obfs_map));
             LoadDex(env, PreloadedDex(dex_fd, size));
             close(dex_fd);
-            InitHooks(env, initInfo);
+            InitArtHooker(env, initInfo);
+            InitHooks(env);
             SetupEntryClass(env);
             LOGD("Done prepare");
             FindAndCall(env, "forkCommon",

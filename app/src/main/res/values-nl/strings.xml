@@ -34,6 +34,8 @@
     <string name="module_repo">Opslagplaats</string>
     <string name="module_repo_loading">Laden…</string>
     <string name="module_repo_up_to_date">Alle modules zijn up-to-date</string>
+    <string name="module_repo_published_time">Gepubliceerd op %s</string>
+    <string name="module_repo_updated_time">Bijgewerkt op %s</string>
     <plurals name="module_repo_upgradable">
         <item quantity="one">%d module te upgraden</item>
         <item quantity="other">%d modules te upgraden</item>
@@ -80,6 +82,7 @@
     <string name="menuSaveToSd">Opslaan</string>
     <string name="nav_item_logs_verbose">Uitgebreide logs</string>
     <string name="nav_item_logs_module">Modules Logbestanden</string>
+    <string name="logs_saved">Opgeslagen logboeken</string>
     <string name="logs_save_failed2">Opslaan mislukt:\n%s</string>
     <string name="menuClearLog">Wis het logboek nu</string>
     <string name="logs_cleared">Log succesvol gewist.</string>

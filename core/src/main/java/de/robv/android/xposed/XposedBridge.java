@@ -20,8 +20,6 @@
 
 package de.robv.android.xposed;
 
-import static de.robv.android.xposed.XposedHelpers.setObjectField;
-
 import android.app.ActivityThread;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -50,7 +48,6 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
  * This class contains most of Xposed's central logic, such as initialization and callbacks used by
  * the native side. It also includes methods to add new hooks.
  */
-@SuppressWarnings("JniMissingFunction")
 public final class XposedBridge {
     /**
      * The system class loader which can be used to locate Android framework classes.
@@ -82,7 +79,7 @@ public final class XposedBridge {
 
     public static volatile ClassLoader dummyClassLoader = null;
 
-    private static final ClassCastException castException = new ClassCastException("Return value's type from hook callback does not match the hooked method");
+    private static final String castException = "Return value's type from hook callback does not match the hooked method";
 
     private static final Method getCause;
 
@@ -133,10 +130,11 @@ public final class XposedBridge {
             ResourcesHook.makeInheritable(resClass);
             ResourcesHook.makeInheritable(taClass);
             ClassLoader myCL = XposedBridge.class.getClassLoader();
+            assert myCL != null;
             dummyClassLoader = ResourcesHook.buildDummyClassLoader(myCL.getParent(), resClass.getName(), taClass.getName());
             dummyClassLoader.loadClass("xposed.dummy.XResourcesSuperClass");
             dummyClassLoader.loadClass("xposed.dummy.XTypedArraySuperClass");
-            setObjectField(myCL, "parent", dummyClassLoader);
+            XposedHelpers.setObjectField(myCL, "parent", dummyClassLoader);
         } catch (Throwable throwable) {
             XposedBridge.log(throwable);
             XposedInit.disableResources = true;
@@ -405,7 +403,7 @@ public final class XposedBridge {
             } else {
                 returnType = null;
             }
-            params = new Object[] {
+            params = new Object[]{
                     method,
                     returnType,
                     isStatic,
@@ -501,7 +499,7 @@ public final class XposedBridge {
             else {
                 var result = param.getResult();
                 if (returnType != null && !returnType.isPrimitive() && !HookBridge.instanceOf(result, returnType)) {
-                    throw castException;
+                    throw new ClassCastException(castException);
                 }
                 return result;
             }
